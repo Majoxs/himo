@@ -46,4 +46,8 @@ new Swiper(mainSlider, {
     disableOnInteraction: true,
   },
   speed: 300,
+  effect: 'fade',
+  fadeEffect: {
+    crossFade: true
+  },
 });

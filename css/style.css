@@ -7,7 +7,7 @@
 :root {
   --color-dark: #131313;
   --color-light: #fff;
-  --color-gray: #6f6f6f;
+  --color-grey: #6f6f6f;
   --color-accent: #ff4040;
 }
 
@@ -25,6 +25,10 @@
   font-display: swap;
   font-weight: 700;
   font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
 }
 
 body {
@@ -125,7 +129,7 @@ p {
   font-weight: 400;
   font-size: 32px;
   line-height: 39px;
-  color: var(--color-gray);
+  color: var(--color-grey);
 }
 
 .bike__text {
@@ -145,13 +149,18 @@ p {
   font-size: 20px;
   font-family: 400px;
   line-height: 24px;
-  padding: 28px 81px;
+  padding: 28px 71px 28px 81px;
   letter-spacing: 1.1em;
   text-transform: uppercase;
   background-color: var(--color-dark);
   color: var(--color-light);
   max-width: 420px;
   width: 100%;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.bike__link:hover {
+  background-color: var(--color-accent);
 }
 
 /*Slider*/
@@ -379,4 +388,188 @@ p {
 
 .slider__column-navigation .swiper-pagination-bullet-active {
   background-color: var(--color-accent);
+}
+
+.price {
+  margin-bottom: 100px;
+}
+
+.price__inner {
+  position: relative;
+}
+
+.form {
+  max-width: 420px;
+}
+
+.form__title {
+  margin: 0;
+  margin-bottom: 40px;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19px;
+  text-transform: uppercase;
+  color: var(--color-dark);
+}
+
+.form__text {
+  color: var(--color-dark);
+  margin-bottom: 30px;
+  max-width: 300px;
+}
+
+.form__input-name,
+.form__input-phone {
+  width: 100%;
+  border: none;
+  border-bottom: 1px solid var(--color-dark);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
+  outline: none;
+}
+
+.form__input-name::placeholder,
+.form__input-phone::placeholder,
+.form__input-text {
+  color: var(--color-grey);
+  opacity: 0.5;
+}
+
+.form__input-text {
+  margin-bottom: 10px;
+}
+
+.form__label-box {
+  display: flex;
+  margin-bottom: 50px;
+}
+
+.form__label:not(:last-child) {
+  margin-right: 23px;
+}
+
+.form__input-radio {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+}
+
+.form__input-radio:checked + .form__bike {
+  display: block;
+}
+
+.form__bike {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.form__bike-price {
+  position: absolute;
+  top: 28px;
+  left: 0;
+  right: 0;
+  width: 221px;
+  height: 112px;
+  font-size: 32px;
+  line-height: 39px;
+  color: var(--color-dark);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  transform: translateX(-50%);
+}
+
+.form__bike-price::after {
+  position: absolute;
+  content: '';
+  width: 221px;
+  height: 112px;
+  border: 1px solid var(--color-accent);
+  border-radius: 50%;
+  top: 12px;
+  left: 0;
+}
+
+.form__radio-style {
+  border-radius: 30px;
+  width: 80px;
+  height: 12px;
+  cursor: pointer;
+}
+
+.form__radio-style--white {
+  background-color: var(--color-light);
+  border: 1px solid var(--color-grey);
+}
+
+.form__radio-style--grey {
+  background-color: var(--color-grey);
+}
+
+.form__radio-style--red {
+  background-color: var(--color-accent);
+}
+
+.form__btn {
+  background-color: var(--color-dark);
+  padding: 28px 71px 28px 81px;
+  color: var(--color-light);
+  border: none;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.form__btn:hover {
+  background-color: var(--color-accent);
+}
+
+.footer {
+  background-color: var(--color-dark);
+}
+
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px 0;
+  color: var(--color-light);
+  height: 100px;
+}
+
+.footer__link {
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: lowercase;
+  text-decoration: underline;
+}
+
+.footer__social-link:not(:last-child) {
+  margin-right: 26px;
+}
+
+.footer__contacts-link {
+  display: flex;
+  align-items: center;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: lowercase;
+}
+
+.footer__contacts-link:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.footer__contacts-img {
+  margin-right: 10px;
 }
