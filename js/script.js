@@ -10,10 +10,6 @@ new Swiper(bikeSlider, {
   simulateTouch: true,
   touchRatio: 2,
   touchAngle: 45,
-  mousewheel: {
-    sensitivity: 1,
-    eventsTarget: '.bike-slider'
-  },
   slidesPerView: 1,
   autoplay: {
     delay: 3000,
